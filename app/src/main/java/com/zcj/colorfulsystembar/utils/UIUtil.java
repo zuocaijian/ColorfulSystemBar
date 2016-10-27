@@ -9,6 +9,7 @@ import android.util.DisplayMetrics;
 import android.util.TypedValue;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.Toast;
 
 import com.zcj.colorfulsystembar.base.BaseApplication;
 
@@ -18,6 +19,20 @@ import com.zcj.colorfulsystembar.base.BaseApplication;
  */
 
 public class UIUtil {
+    private static Toast mToast;
+
+    public static void showMsg(String msg) {
+        if (null == mToast) {
+            synchronized (UIUtil.class) {
+                if (null == mToast) {
+                    mToast = Toast.makeText(BaseApplication.getContext(), "", Toast.LENGTH_LONG);
+                }
+            }
+        }
+        mToast.setText(msg);
+        mToast.show();
+    }
+
     public static DisplayMetrics getMetrics() {
         DisplayMetrics dm = new DisplayMetrics();
 

@@ -8,7 +8,8 @@ import android.graphics.Rect;
 import android.util.AttributeSet;
 import android.widget.ImageView;
 
-import com.zcj.simple.demo.R;
+import com.zcj.colorfulsystembar.R;
+
 
 /**
  * Created by zcj on 2016/10/25.

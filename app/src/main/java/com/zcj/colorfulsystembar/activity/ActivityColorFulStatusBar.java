@@ -5,6 +5,8 @@ import android.support.annotation.Nullable;
 
 import com.zcj.colorfulsystembar.R;
 import com.zcj.colorfulsystembar.base.BaseActivity;
+import com.zcj.colorfulsystembar.utils.ConfigUtil;
+import com.zcj.colorfulsystembar.utils.UIUtil;
 
 
 /**
@@ -20,5 +22,10 @@ public class ActivityColorFulStatusBar extends BaseActivity {
 
         setTransparentStatusbar();
         setDarkStatusBarMode();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
     }
 }

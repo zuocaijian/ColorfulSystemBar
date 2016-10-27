@@ -1,5 +1,6 @@
 package com.zcj.colorfulsystembar.base;
 
+import android.annotation.SuppressLint;
 import android.graphics.Color;
 import android.os.Build;
 import android.support.v7.app.AppCompatActivity;
@@ -21,7 +22,7 @@ import java.lang.reflect.Method;
  * 3、是否开启手势返回。
  * Created by zcj on 2016/10/25.
  */
-
+@SuppressLint("Deprecated")
 public class BaseActivity extends AppCompatActivity {
 
 
@@ -74,8 +75,10 @@ public class BaseActivity extends AppCompatActivity {
      */
     protected void setDarkStatusBarMode() {
         setAPI23DarkStatusBarMode();
-        setMiuiDarkStatusBarMode(true);
-        setMeizuDarkStatusBarMode(true);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+            setMiuiDarkStatusBarMode(true);
+            setMeizuDarkStatusBarMode(true);
+        }
     }
 
     private void setAPI23DarkStatusBarMode() {
