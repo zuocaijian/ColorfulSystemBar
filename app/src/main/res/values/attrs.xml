@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="MaskImageView">
+        <attr name="maskAlpha" format="integer" />
+        <attr name="maskColor" format="color" />
+    </declare-styleable>
+</resources>
